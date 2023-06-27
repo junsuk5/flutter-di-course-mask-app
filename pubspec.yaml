@@ -40,6 +40,8 @@ dependencies:
   json_annotation: ^4.8.1
   dio: ^5.2.1+1
   geolocator: ^9.0.2
+  injectable: ^2.1.2
+  get_it: ^7.6.0
 
 dev_dependencies:
   flutter_test:
@@ -54,6 +56,7 @@ dev_dependencies:
   freezed: ^2.3.5
   json_serializable: ^6.7.0
   build_runner: ^2.4.5
+  injectable_generator: ^2.1.6
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
