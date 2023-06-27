@@ -30,11 +30,16 @@ class GetNearByStoresUseCase {
     // 권한 체크
     if (isServiceEnabled) {
       // 현재 위치 권한 정보
-      final permission = await _locationPermissionHandler.checkPermission();
+      var permission = await _locationPermissionHandler.checkPermission();
       //// 거부 -> 정렬 없이 리턴
       if (permission == Permission.denied) {
-        print('거부');
-        return stores;
+        // 요청
+        permission = await _locationPermissionHandler.requestPermission();
+
+        if (permission == Permission.denied) {
+          print('거부');
+          return stores;
+        }
       }
 
       //// 2번 거부 -> 정렬 없이 리턴
