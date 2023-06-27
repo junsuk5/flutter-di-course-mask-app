@@ -9,7 +9,9 @@ class MainViewModel with ChangeNotifier {
 
   MainState get state => _state;
 
-  MainViewModel(this._getNearByStoresUseCase);
+  MainViewModel(this._getNearByStoresUseCase) {
+    getStores();
+  }
 
   Future<void> getStores() async {
     _state = state.copyWith(isLoading: true);
