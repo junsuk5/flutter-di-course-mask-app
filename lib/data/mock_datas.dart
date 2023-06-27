@@ -6,6 +6,7 @@ import 'package:mask_info_clean_arch/domain/permission/location_permission_handl
 import 'package:mask_info_clean_arch/domain/repository/location_repository.dart';
 import 'package:mask_info_clean_arch/domain/repository/store_repository.dart';
 
+@dev
 @Singleton(as: StoreRepository)
 class MockStoreRepositoryImpl implements StoreRepository {
   @override
